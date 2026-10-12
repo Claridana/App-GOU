@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra azul superior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#07366C" />
+
+        <!-- Contenido -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="35dp"
+            android:paddingBottom="30dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Logo Gou"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher" />
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="Crear cuenta"
+                android:textColor="#111111"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Subtítulo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Únete a Gou"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <!-- Nombre -->
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Correo -->
+            <EditText
+                android:id="@+id/edtCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Teléfono -->
+            <EditText
+                android:id="@+id/edtTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Número de teléfono"
+                android:inputType="phone"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Contraseña -->
+            <EditText
+                android:id="@+id/edtContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColor="#111111"
+                android:textColorHint="#666666"
+                android:drawableEnd="@drawable/ic_visibility"
+                android:drawablePadding="10dp"/>
+
+            <!-- Confirmar contraseña -->
+            <EditText
+                android:id="@+id/edtConfirmarContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Confirmar contraseña"
+                android:inputType="textPassword"
+                android:textColor="#111111"
+                android:textColorHint="#666666"
+                android:drawableEnd="@drawable/ic_visibility"
+                android:drawablePadding="10dp"/>
+
+            <!-- Crear cuenta -->
+            <Button
+                android:id="@+id/btnCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="#07366C"
+                android:text="Crear cuenta"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Ya tiene cuenta -->
+            <TextView
+                android:id="@+id/txtIniciarSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:padding="8dp"
+                android:text="¿Ya tienes una cuenta? Iniciar sesión"
+                android:textColor="#07366C"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

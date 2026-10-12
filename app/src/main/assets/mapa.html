@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width,
+            initial-scale=1.0,
+            maximum-scale=1.0,
+            user-scalable=no">
+
+    <!-- Leaflet CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Leaflet JavaScript -->
+    <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <style>
+
+        html,
+        body,
+        #map {
+
+            width: 100%;
+            height: 100%;
+
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="map"></div>
+<script>
+
+    // API STADIA MAPS
+    const API_KEY = "ab8f272e-4fc4-4c96-a20e-73c9e23e46e6";
+
+    // CREAR MAPA
+    const map = L.map("map").setView(
+        [14.77, -91.2903],
+        12
+    );
+
+    // CAPA DEL MAPA
+    L.tileLayer(
+
+        "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key="
+        + API_KEY,
+        {
+            maxZoom: 20,
+            attribution:
+                '&copy; OpenStreetMap contributors &copy; Stadia Maps'
+        }
+    ).addTo(map);
+    let marcadoresTalleres = [];
+
+    // AGREGAR TALLER
+    function agregarTaller(
+        id,
+        nombre,
+        latitud,
+        longitud
+    ) {
+        const marcador = L.marker(
+            [latitud, longitud]
+        ).addTo(map);
+        marcadoresTalleres.push(marcador);
+
+        marcador.bindPopup(
+            "<b>" + nombre + "</b><br>" +
+            "Taller mecánico<br><br>" +
+            "<button onclick=\"abrirTaller('" +
+            id +
+            "')\">" +
+            "Ver taller" +
+            "</button>"
+        );
+    }
+
+    function limpiarTalleres() {
+    marcadoresTalleres.forEach(
+        function(marcador) {
+            map.removeLayer(marcador);
+        }
+    );
+    marcadoresTalleres = [];
+}
+
+    // ABRIR PERFIL DEL TALLER
+    function abrirTaller(id) {
+        if (window.Android) {
+            Android.abrirTaller(id);
+        }
+    }
+
+    // UBICACIÓN DEL USUARIO
+    let marcadorUsuario = null;
+    function mostrarUbicacionUsuario(
+        latitud,
+        longitud
+    ) {
+        // Si ya existe un marcador anterior,
+        // lo eliminamos.
+        if (marcadorUsuario !== null) {
+            map.removeLayer(
+                marcadorUsuario
+            );
+        }
+
+        // Icono azul del usuario
+        const iconoUsuario =
+            L.divIcon({
+                className: "",
+                html:
+                    '<div style="' +
+                    'width:18px;' +
+                    'height:18px;' +
+                    'background:#1677FF;' +
+                    'border:4px solid white;' +
+                    'border-radius:50%;' +
+                    'box-shadow:0 0 6px rgba(0,0,0,0.45);' +
+                    '"></div>',
+                iconSize: [
+                    26,
+                    26
+                ],
+                iconAnchor: [
+                    13,
+                    13
+                ]
+            });
+
+        // Crear marcador del usuario
+        marcadorUsuario =
+            L.marker(
+                [latitud,longitud],
+                {
+                    icon: iconoUsuario
+                }
+            ).addTo(map);
+
+        // Popup
+        marcadorUsuario.bindPopup(
+            "<b>Tu ubicación</b>"
+        );
+
+        // Centrar mapa en el usuario
+        map.setView(
+            [ latitud, longitud ],
+            14
+        );
+    }
+
+</script>
+</body>
+
+</html>

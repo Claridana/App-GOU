@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra azul superior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#07366C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Logo Gou"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="Registrar taller"
+                android:textColor="#111111"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Crea tu cuenta como propietario"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+
+            <!-- Nombre -->
+            <EditText
+                android:id="@+id/edtNombrePropietario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nombre del propietario"
+                android:inputType="textPersonName"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Correo -->
+            <EditText
+                android:id="@+id/edtCorreoPropietario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Teléfono -->
+            <EditText
+                android:id="@+id/edtTelefonoPropietario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Número de teléfono"
+                android:inputType="phone"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Contraseña -->
+            <EditText
+                android:id="@+id/edtContrasenaPropietario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColor="#111111"
+                android:textColorHint="#666666"
+                android:drawableEnd="@drawable/ic_visibility"
+                android:drawablePadding="10dp"/>
+
+            <!-- Confirmar contraseña -->
+            <EditText
+                android:id="@+id/edtConfirmarContrasenaPropietario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Confirmar contraseña"
+                android:inputType="textPassword"
+                android:textColor="#111111"
+                android:textColorHint="#666666"
+                android:drawableEnd="@drawable/ic_visibility"
+                android:drawablePadding="10dp"/>
+
+            <Button
+                android:id="@+id/btnContinuarPropietario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#07366C"
+                android:text="Continuar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ya tienes una cuenta? "
+                    android:textColor="#555555"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtIniciarSesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Iniciar sesión"
+                    android:textColor="#07366C"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <!-- Nombre del usuario o taller -->
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="#111111"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- Estrellas -->
+    <RatingBar
+        android:id="@+id/ratingResena"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="1" />
+
+    <!-- Comentario -->
+    <TextView
+        android:id="@+id/txtComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Comentario"
+        android:textColor="#444444"
+        android:textSize="14sp" />
+
+    <!-- Fecha -->
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#888888"
+        android:textSize="12sp" />
+
+    <!-- Estado del taller -->
+    <TextView
+        android:id="@+id/txtTallerNoDisponible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Este taller no está disponible actualmente"
+        android:textColor="#B00020"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!--
+        Estos botones solo aparecerán en MisResenas.
+        En PerfilTaller permanecerán ocultos.
+    -->
+
+    <LinearLayout
+        android:id="@+id/contenedorAccionesResena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <!-- Editar -->
+        <Button
+            android:id="@+id/btnEditarResena"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:backgroundTint="#07366C"
+            android:text="Editar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Espacio -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="1dp" />
+
+        <!-- Eliminar -->
+        <Button
+            android:id="@+id/btnEliminarResena"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:backgroundTint="#DDDDDD"
+            android:text="Eliminar"
+            android:textAllCaps="false"
+            android:textColor="#B00020"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra superior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#07366C" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Logo Gou"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Información del taller"
+                android:textColor="#111111"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Cuéntanos sobre tu negocio"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <!-- Nombre taller -->
+            <EditText
+                android:id="@+id/edtNombreTaller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="Nombre del taller"
+                android:inputType="textCapWords"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Teléfono taller -->
+            <EditText
+                android:id="@+id/edtTelefonoTaller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Teléfono de contacto del taller"
+                android:inputType="phone"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Horario -->
+            <EditText
+                android:id="@+id/edtHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Horario de atención"
+                android:inputType="text"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Descripción -->
+            <EditText
+                android:id="@+id/edtDescripcionTaller"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:gravity="top"
+                android:hint="Descripción del taller"
+                android:inputType="textMultiLine"
+                android:paddingTop="10dp"
+                android:textColor="#111111"
+                android:textColorHint="#666666" />
+
+            <!-- Servicios -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Servicios que ofrece"
+                android:textColor="#111111"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Selecciona los servicios disponibles"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <CheckBox
+                android:id="@+id/chkMecanicaGeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mecánica general" />
+
+            <CheckBox
+                android:id="@+id/chkCambioAceite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambio de aceite" />
+
+            <CheckBox
+                android:id="@+id/chkFrenos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frenos" />
+
+            <CheckBox
+                android:id="@+id/chkMotor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motor" />
+
+            <CheckBox
+                android:id="@+id/chkElectricidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electricidad automotriz" />
+
+            <CheckBox
+                android:id="@+id/chkLlantas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Llantas" />
+
+            <CheckBox
+                android:id="@+id/chkDiagnostico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnóstico" />
+
+            <!-- SERVICIOS PERSONALIZADOS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Servicios adicionales"
+                android:textColor="#111111"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Agrega servicios que no aparecen en la lista"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+
+            <!-- Aquí Java agregará los campos dinámicamente -->
+            <LinearLayout
+                android:id="@+id/contenedorServiciosPersonalizados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+
+            <Button
+                android:id="@+id/btnAgregarServicio"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="+ Agregar servicio"
+                android:textAllCaps="false"
+                android:textColor="#07366C"
+                android:textStyle="bold" />
+
+            <!-- Fotos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Foto del taller"
+                android:textColor="#111111"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Podrás mostrar tu taller"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnFotos"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="Agregar fotografía"
+                android:textAllCaps="false"
+                android:textColor="#07366C" />
+
+            <ImageView
+                android:id="@+id/imgFotoTaller"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:background="#DDDDDD"
+                android:contentDescription="Fotografía seleccionada"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <!-- Ubicación -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Ubicación"
+                android:textColor="#111111"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="La ubicación permitirá mostrar tu taller en el mapa"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="Configurar ubicación"
+                android:textAllCaps="false"
+                android:textColor="#07366C" />
+
+            <TextView
+                android:id="@+id/txtUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Ubicación no configurada"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <!-- Botón final -->
+            <Button
+                android:id="@+id/btnFinalizarTaller"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#07366C"
+                android:text="Guardar taller"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

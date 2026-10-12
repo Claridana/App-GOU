@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardTaller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="#FFFFFF"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <!-- Imagen del taller -->
+    <ImageView
+        android:id="@+id/imgTaller"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#E0E0E0"
+        android:contentDescription="Imagen del taller"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_taller" />
+
+
+    <!-- Información -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Taller Mecánico"
+            android:textColor="#111111"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <!-- Servicios -->
+        <TextView
+            android:id="@+id/txtServicios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="2"
+            android:text="Mecánica general • Frenos"
+            android:textColor="#666666"
+            android:textSize="12sp" />
+
+
+        <!-- CALIFICACIÓN -->
+        <TextView
+            android:id="@+id/txtCalificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sin reseñas todavía"
+            android:textColor="#07366C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <!-- Horario -->
+        <TextView
+            android:id="@+id/txtHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="Horario de atención"
+            android:textColor="#555555"
+            android:textSize="11sp" />
+
+
+        <!-- Distancia -->
+        <TextView
+            android:id="@+id/txtDistancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="#555555"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

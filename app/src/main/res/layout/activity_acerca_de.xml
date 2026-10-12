@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!-- Barra azul superior -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#07366C" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="25dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="35dp">
+
+
+            <!-- Volver -->
+            <TextView
+                android:id="@+id/btnVolver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="‹ Volver"
+                android:textColor="#07366C"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Logo Gou"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher" />
+
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:text="Acerca de Gou"
+                android:textColor="#111111"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <!-- Descripción -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="Gou es una aplicación móvil desarrollada como parte de un proyecto académico, orientada a facilitar la búsqueda y consulta de talleres mecánicos."
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+
+            <!-- Finalidad -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Finalidad"
+                android:textColor="#07366C"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Facilitar la localización de talleres mecánicos mediante geolocalización y apoyar al usuario en la elección de establecimientos a través de información sobre sus servicios, ubicación, distancia y valoraciones."
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#DDDDDD" />
+
+
+            <!-- Desarrollado por -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="Desarrollado por"
+                android:textColor="#07366C"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <!-- Foto de la autora -->
+            <ImageView
+                android:id="@+id/imgAutora"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="Fotografía de la desarrolladora"
+                android:scaleType="centerCrop"
+                android:src="@drawable/foto_autora" />
+
+
+            <!-- Nombre -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Iris Clarita Dayana González González"
+                android:textColor="#111111"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="Universidad del Valle de Guatemala Campus Altiplano"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+
+            <!-- Versión -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Gou · Versión 1.0"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="2026"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

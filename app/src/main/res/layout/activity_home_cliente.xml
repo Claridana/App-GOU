@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F4F4">
+
+
+    <!-- Barra azul superior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#07366C" />
+
+
+    <!-- ENCABEZADO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/txtGoGo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gou"
+            android:textColor="#07366C"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgPerfil"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="Logo Gou"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+
+    <!-- CONTENIDO -->
+    <ScrollView
+        android:id="@+id/scrollHome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- BIENVENIDA -->
+            <TextView
+                android:id="@+id/txtHola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Hola!"
+                android:textColor="#111111"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Encuentra un taller cerca de ti"
+                android:textColor="#555555"
+                android:textSize="15sp" />
+
+
+            <!-- BUSCADOR -->
+            <EditText
+                android:id="@+id/edtBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="15dp"
+                android:background="#FFFFFF"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="10dp"
+                android:hint="Buscar por ubicación"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="#111111"
+                android:textColorHint="#777777" />
+
+
+            <!-- UBICACIÓN ACTUAL -->
+            <Button
+                android:id="@+id/btnUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#07366C"
+                android:text="📍 Usar mi ubicación"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#555555"
+                android:textSize="13sp" />
+
+
+            <!-- MAPA -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Talleres cerca de ti"
+                android:textColor="#111111"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Explora el mapa y toca un marcador para ver el taller"
+                android:textColor="#777777"
+                android:textSize="12sp" />
+
+            <WebView
+                android:id="@+id/webMapa"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
+                android:background="#E0E0E0"
+                tools:ignore="WebViewLayout" />
+
+
+            <!-- TALLERES -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Talleres disponibles"
+                android:textColor="#111111"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <!--
+                LISTA DINÁMICA
+
+                Ya NO usamos RecyclerView.
+                HomeCliente agregará item_taller.xml
+                directamente dentro de este LinearLayout.
+            -->
+            <TextView
+                android:id="@+id/txtSinTalleres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#E7F0FA"
+                android:gravity="center"
+                android:padding="18dp"
+                android:text="No hay talleres disponibles en esta ubicación"
+                android:textColor="#07366C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <LinearLayout
+                android:id="@+id/listaTalleres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- NAVEGACIÓN INFERIOR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="4dp">
+
+        <!-- Inicio -->
+        <TextView
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_home"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="Inicio"
+            android:textColor="#07366C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Buscar -->
+        <TextView
+            android:id="@+id/navBuscar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_search"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="Buscar"
+            android:textColor="#555555"
+            android:textSize="12sp" />
+
+        <!-- Perfil -->
+        <TextView
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/baseline_person_24"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="Perfil"
+            android:textColor="#555555"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
